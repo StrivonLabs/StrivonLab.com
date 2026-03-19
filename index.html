@@ -1,34 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>StrivonLabs</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Strivon Labs</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="sidebar">
-        <h2>StrivonLabs</h2>
-        <button onclick="load('blox', this)">Blox Fruits</button>
-        <button onclick="load('bedwars', this)">BedWars</button>
-        <button onclick="load('doors', this)">Doors</button>
-        <button onclick="load('arsenal', this)">Arsenal</button>
-        <button onclick="load('jailbreak', this)">Jailbreak</button>
+<header>
+    <h1>Strivon Labs</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#tools">Tools</a>
+        <a href="#resources">Resources</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Innovating Digital Tools & AI Solutions</h2>
+    <p>Built by a young developer pushing boundaries.</p>
+</section>
+
+<section id="tools">
+    <h2>Projects</h2>
+    <div class="grid">
+        <div class="card">AI Assistant</div>
+        <div class="card">Script Hub</div>
+        <div class="card">Design Tools</div>
     </div>
+</section>
 
-    <div class="main">
-        <header>
-            <h1>Script Hub</h1>
-            <p>Built by a highly skilled 13-year-old developer creating advanced systems.</p>
-        </header>
-
-        <input type="text" id="search" placeholder="Search scripts..." onkeyup="searchScripts()">
-
-        <div id="scripts" class="grid"></div>
+<section id="resources">
+    <h2>Resources</h2>
+    <div class="grid">
+        <div class="card">Coding Guides</div>
+        <div class="card">Templates</div>
+        <div class="card">APIs</div>
     </div>
+</section>
 
-    <div id="toast"></div>
+<section id="about">
+    <h2>About</h2>
+    <p>
+        Strivon Labs is a project built by Yahia Mahmoud Ramy (Grade 7A),
+        focused on creating tools, AI systems, and digital experiences.
+    </p>
+</section>
 
-    <script src="script.js"></script>
+<footer>
+    <p>© 2026 Strivon Labs. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
