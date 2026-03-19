@@ -1,37 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Strivon Platform</title>
+    <title>StrivonLabs</title>
     <link rel="stylesheet" href="style.css">
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-    <nav class="navbar">
-        <h1>Strivon</h1>
-    </nav>
-
-    <section class="hero">
-        <h2>Build. Adapt. Dominate.</h2>
-        <p>A modular workflow platform for everything.</p>
-    </section>
-
-    <div class="filters">
-        <button onclick="filter('all')"><i class="fas fa-layer-group"></i> All</button>
-        <button onclick="filter('gaming')"><i class="fas fa-gamepad"></i> Gaming</button>
-        <button onclick="filter('tools')"><i class="fas fa-wrench"></i> Tools</button>
-        <button onclick="filter('scripts')"><i class="fas fa-code"></i> Scripts</button>
-        <button onclick="filter('dev')"><i class="fas fa-laptop-code"></i> Dev</button>
-        <button onclick="filter('ai')"><i class="fas fa-robot"></i> AI</button>
-        <button onclick="filter('productivity')"><i class="fas fa-bolt"></i> Productivity</button>
-        <button onclick="filter('education')"><i class="fas fa-book"></i> Education</button>
+    <div class="sidebar">
+        <h2>StrivonLabs</h2>
+        <button onclick="load('blox')">Blox Fruits</button>
+        <button onclick="load('bedwars')">BedWars</button>
+        <button onclick="load('doors')">Doors</button>
+        <button onclick="load('arsenal')">Arsenal</button>
+        <button onclick="load('jailbreak')">Jailbreak</button>
     </div>
 
-    <section class="grid" id="content"></section>
+    <div class="main">
+        <header>
+            <h1>Script Hub</h1>
+            <p>Built by a highly skilled 13-year-old developer creating advanced systems.</p>
+        </header>
 
-    <script src="app.js"></script>
+        <input type="text" id="search" placeholder="Search scripts..." onkeyup="searchScripts()">
+
+        <div id="scripts" class="grid"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
