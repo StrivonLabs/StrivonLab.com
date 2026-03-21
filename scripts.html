@@ -1,44 +1,154 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Script Hub</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strivon Script Hub | Roblox & Lua</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<h1>Script Hub</h1>
+    <header>
+        <h1>STRIVON LABS</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a onclick="goAI()">AI Script Lab</a>
+            <a href="scripts.html">Script Hub</a>
+            <a href="index.html#downloads">Downloads</a>
+        </nav>
+    </header>
 
-<div class="grid">
+    <section class="hero" style="padding: 4rem 5%">
+        <h2>Elite Script Repository</h2>
+        <p>The most advanced collection of Roblox and Lua scripts, updated daily.</p>
+    </section>
 
-  <div class="card">
-    <h3>Lua Basics</h3>
-    <pre>
-print("Hello World")
-    </pre>
-  </div>
+    <div class="search-container">
+        <input type="text" id="scriptSearch" placeholder="Search for a game or script (e.g. 'Jailbreak', 'Vape')..." onkeyup="filterScripts()">
+    </div>
 
-  <div class="card">
-    <h3>Loop Example</h3>
-    <pre>
-while true do
-  print("Running")
-  wait(1)
-end
-    </pre>
-  </div>
+    <div class="grid" id="scriptGrid">
+        <!-- VAPE V4 -->
+        <div class="card" data-title="Vape V4 Roblox Bedwars">
+            <span style="position: absolute; top: 10px; right: 10px; background: var(--razer-green); color: black; padding: 2px 8px; border-radius: 5px; font-size: 0.7rem; font-weight: bold;">PREMIUM</span>
+            <h3>Vape V4</h3>
+            <p>The ultimate Bedwars utility. Combat, Movement, and Visuals.</p>
+            <pre>loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMain.lua", true))()</pre>
+            <button onclick="copyToClipboard(this)">Copy Script</button>
+        </div>
 
-  <div class="card">
-    <h3>Simple Function</h3>
-    <pre>
-function greet(name)
-  print("Hello "..name)
-end
+        <!-- JAILBREAK -->
+        <div class="card" data-title="Jailbreak Auto Farm">
+            <h3>Jailbreak</h3>
+            <p>Auto-rob, Infinite Nitro, and Instant Teleport.</p>
+            <pre>loadstring(game:HttpGet("https://raw.githubusercontent.com/Strivon/Jailbreak/main/AutoFarm.lua"))()</pre>
+            <button onclick="copyToClipboard(this)">Copy Script</button>
+        </div>
 
-greet("Strivon")
-    </pre>
-  </div>
+        <!-- 99 NIGHTS -->
+        <div class="card" data-title="99 Nights God Mode">
+            <h3>99 Nights</h3>
+            <p>God Mode, Infinite Coins, and Speed Multiplier.</p>
+            <pre>loadstring(game:HttpGet("https://raw.githubusercontent.com/Strivon/99Nights/main/Hub.lua"))()</pre>
+            <button onclick="copyToClipboard(this)">Copy Script</button>
+        </div>
 
-</div>
+        <!-- UNIVERSAL AIMBOT -->
+        <div class="card" data-title="Universal Aimbot ESP">
+            <h3>Universal Aimbot</h3>
+            <p>Works on 500+ games. Silent Aim, Smoothing, and Box ESP.</p>
+            <pre>loadstring(game:HttpGet("https://raw.githubusercontent.com/Strivon/Universal/main/Aimbot.lua"))()</pre>
+            <button onclick="copyToClipboard(this)">Copy Script</button>
+        </div>
 
+        <!-- ANTI-CHEAT BYPASS -->
+        <div class="card" data-title="Anti-cheat Bypass Injection">
+            <h3>Anti-cheat Bypass</h3>
+            <p>Bypass Byfron and Hyperion detections with stealth injection.</p>
+            <pre>-- Strivon Stealth Injection System v2.1
+-- Protected by Strivon Labs</pre>
+            <button onclick="comingSoon()">Get Key</button>
+        </div>
+
+        <!-- BLOX FRUITS -->
+        <div class="card" data-title="Blox Fruits Auto Quest">
+            <h3>Blox Fruits</h3>
+            <p>Level Farm, Raid Helper, and Fruit Finder.</p>
+            <pre>loadstring(game:HttpGet("https://raw.githubusercontent.com/Strivon/BloxFruits/main/Main.lua"))()</pre>
+            <button onclick="copyToClipboard(this)">Copy Script</button>
+        </div>
+
+        <!-- MURDER MYSTERY 2 -->
+        <div class="card" data-title="Murder Mystery 2 MM2 Silent Aim">
+            <h3>Murder Mystery 2</h3>
+            <p>Esp, Silent Aim (Sheriff), and Auto-Collect Coins.</p>
+            <pre>loadstring(game:HttpGet("https://raw.githubusercontent.com/Strivon/MM2/main/Hub.lua"))()</pre>
+            <button onclick="copyToClipboard(this)">Copy Script</button>
+        </div>
+
+        <!-- PET SIMULATOR 99 -->
+        <div class="card" data-title="Pet Simulator 99 Auto Hatch">
+            <h3>Pet Simulator 99</h3>
+            <p>Auto-Hatch, Gem Farm, and Trade Scammer Protection.</p>
+            <pre>loadstring(game:HttpGet("https://raw.githubusercontent.com/Strivon/PS99/main/Farm.lua"))()</pre>
+            <button onclick="copyToClipboard(this)">Copy Script</button>
+        </div>
+
+        <!-- ARSENAL -->
+        <div class="card" data-title="Arsenal Silent Aim Wallhack">
+            <h3>Arsenal</h3>
+            <p>Kill All, Wallhack, and No Recoil.</p>
+            <pre>loadstring(game:HttpGet("https://raw.githubusercontent.com/Strivon/Arsenal/main/Aimbot.lua"))()</pre>
+            <button onclick="copyToClipboard(this)">Copy Script</button>
+        </div>
+
+        <!-- DOORS -->
+        <div class="card" data-title="Doors Entity Notifier">
+            <h3>Doors</h3>
+            <p>Entity Notifier, Speed Boost, and Item ESP.</p>
+            <pre>loadstring(game:HttpGet("https://raw.githubusercontent.com/Strivon/Doors/main/Helper.lua"))()</pre>
+            <button onclick="copyToClipboard(this)">Copy Script</button>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Strivon Labs. Use at your own risk. Scripts are for educational purposes.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function filterScripts() {
+            const input = document.getElementById('scriptSearch');
+            const filter = input.value.toLowerCase();
+            const grid = document.getElementById('scriptGrid');
+            const cards = grid.getElementsByClassName('card');
+
+            for (let i = 0; i < cards.length; i++) {
+                const title = cards[i].getAttribute('data-title').toLowerCase();
+                if (title.indexOf(filter) > -1) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+
+        function copyToClipboard(btn) {
+            const pre = btn.previousElementSibling;
+            const text = pre.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = btn.innerText;
+                btn.innerText = "COPIED!";
+                btn.style.background = "var(--accent-cyan)";
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.background = "var(--razer-green)";
+                }, 2000);
+            });
+        }
+    </script>
 </body>
 </html>

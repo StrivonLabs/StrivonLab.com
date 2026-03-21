@@ -3,51 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strivon Labs</title>
+    <title>Strivon Labs | Ultimate Gaming Hub</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <header>
-        <h1>Strivon Labs</h1>
+        <h1>STRIVON LABS</h1>
         <nav>
-            <a href="#">Home</a>
-            <a onclick="goAI()">AI</a>
-            <a onclick="goScripts()">Scripts</a>
+            <a href="index.html">Home</a>
+            <a onclick="goAI()">AI Script Lab</a>
+            <a onclick="goScripts()">Script Hub</a>
+            <a href="#downloads">Downloads</a>
         </nav>
     </header>
 
     <section class="hero">
-        <h2>Build Smarter. Faster. Better.</h2>
-        <p>The next-gen toolkit powered by AI</p>
-        <button onclick="goAI()">Get Started</button>
+        <h2>Unleash Your Power.</h2>
+        <p>Advanced gaming tools, script generation, and performance optimization in one place.</p>
+        <button onclick="goScripts()">Explore Scripts</button>
+    </section>
+
+    <section class="dashboard">
+        <div class="dashboard-header">
+            <h3>PERFORMANCE DASHBOARD</h3>
+            <p>Optimize your system for peak gaming performance</p>
+        </div>
+        
+        <div class="booster-panel">
+            <div class="stat-box">
+                <span class="stat-value" id="ramStat">16GB</span>
+                <span class="stat-label">RAM Available</span>
+            </div>
+            
+            <div class="stat-box">
+                <span class="stat-label">Game Booster</span>
+                <br><br>
+                <label class="switch">
+                    <input type="checkbox" id="boosterToggle" onchange="toggleBooster()">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="stat-box">
+                <span class="stat-value" id="fpsStat">144</span>
+                <span class="stat-label">Potential FPS Boost</span>
+            </div>
+        </div>
     </section>
 
     <section class="grid">
-
         <div class="card">
-            <h3>AI Assistant</h3>
-            <p>Local AI (FREE)</p>
-            <button onclick="goAI()">Launch</button>
+            <h3>AI Script Lab</h3>
+            <p>Generate professional Roblox and Lua scripts using our fine-tuned AI model.</p>
+            <button onclick="goAI()">Launch AI</button>
         </div>
 
         <div class="card">
-            <h3>Script Hub</h3>
-            <p>Explore scripts</p>
-            <button onclick="goScripts()">Open</button>
+            <h3>Premium Script Hub</h3>
+            <p>Access Vape V4, Jailbreak cheats, and 10+ game-specific script categories.</p>
+            <button onclick="goScripts()">Open Hub</button>
         </div>
 
         <div class="card">
-            <h3>Code Generator</h3>
-            <p>Generate code</p>
-            <button onclick="comingSoon()">Try</button>
+            <h3>Anti-Cheat Bypass</h3>
+            <p>Stay undetected with our latest script injection and bypassing techniques.</p>
+            <button onclick="comingSoon()">Get Access</button>
         </div>
+    </section>
 
+    <section class="downloads" id="downloads">
+        <div class="dashboard-header">
+            <h3>LINKS & DOWNLOADS</h3>
+        </div>
+        
+        <a href="https://www.razer.com/cortex" target="_blank" class="download-link">
+            <span>Razer Cortex - Game Booster</span>
+            <span style="color: var(--razer-green)">Download -></span>
+        </a>
+        
+        <a href="https://vape.gg" target="_blank" class="download-link">
+            <span>Vape V4 - Official Client</span>
+            <span style="color: var(--accent-cyan)">Visit Site -></span>
+        </a>
+
+        <a href="#" class="download-link">
+            <span>Strivon Injector (v1.2)</span>
+            <span style="color: var(--razer-green)">Coming Soon</span>
+        </a>
     </section>
 
     <footer>
-        <p>© 2026 Strivon Labs</p>
+        <p>© 2026 Strivon Labs AI. All rights reserved. Gaming evolved.</p>
     </footer>
 
     <script src="script.js"></script>
